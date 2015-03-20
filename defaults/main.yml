@@ -1,0 +1,34 @@
+---
+jira_tar_archive: "atlassian-jira-{{ jira_version }}.tar.gz"
+
+jira_download_url: "http://www.atlassian.com/software/jira/downloads/binary/{{ jira_tar_archive }}"
+
+jira_groupname: jira
+
+jira_username: jira
+
+jira_install_dir: /opt/jira
+
+jira_home_dir: /opt/jira-home
+
+
+# The following should be provided to a playbook using environment variables
+
+#jira_version:
+
+#jira_db_name
+
+#jira_db_username:
+
+#jira_db_password:
+
+#jira_tcp_port:
+
+#jira_test_http_endpoint:
+
+#jira_test_http_status_code:
+
+#jira_test_string:
+
+#DB_SERVICE_ADDRESS:
+
