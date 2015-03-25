@@ -32,7 +32,7 @@ The version of JIRA being installed.
     jira_db_name
     jira_db_username
     jira_db_password
-    DB_SERVICE_ADDRESS
+    jira_db_service_address
 
 The PostgreSQL database, user name, password, and IP address.
 

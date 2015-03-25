@@ -30,5 +30,5 @@ jira_home_dir: /opt/jira-home
 
 #jira_test_string:
 
-#DB_SERVICE_ADDRESS:
+#jira_db_service_address:
 
