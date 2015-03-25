@@ -1,5 +1,21 @@
 ---
-# TODO Manage amount of memory available for JIRA
+- name: Configure minimum amount of memory allocated to JIRA
+  lineinfile:
+    dest: "{{ jira_install_dir}}/bin/setenv.sh"
+    regexp: JVM_MINIMUM_MEMORY=
+    line: JVM_MINIMUM_MEMORY="{{ jira_memory_limit | default(384) }}m"
+
+- name: Configure maximum amount of memory allocated to JIRA
+  lineinfile:
+    dest: "{{ jira_install_dir}}/bin/setenv.sh"
+    regexp: JVM_MAXIMUM_MEMORY=
+    line: JVM_MAXIMUM_MEMORY="{{ jira_memory_limit | default(768) }}m"
+
+- name: Set the Permanent Generation Memory size limit to the minimum memory amount value
+  lineinfile:                                 
+    dest: "{{ jira_install_dir}}/bin/setenv.sh"
+    regexp: JIRA_MAX_PERM_SIZE=                                        
+    line: JIRA_MAX_PERM_SIZE="{{ jira_memory_limit | default(384) }}m"
 
 - name: Configure database connection
   template:

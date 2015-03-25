@@ -29,6 +29,10 @@ The directory where critical JIRA data is stored. Unless a temporary container i
 
 The version of JIRA being installed.
 
+    jira_memory_limit 
+
+The amount of memory allocated to JIRA. It is used for the JVM_MINIMUM_MEMORY, JVM_MAXIMUM_MEMORY, and JIRA_MAX_PERM_SIZE variables. If an amount isn't specified then 384, 768, and 384 are used as defaults respectively.
+
     jira_db_name
     jira_db_username
     jira_db_password
